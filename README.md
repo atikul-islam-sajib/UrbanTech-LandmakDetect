@@ -1,5 +1,7 @@
 # Tourist Landmark Detection Using YOLO
 
+![Landmark Detection](./outputs/images.png)
+
 ## Project Overview
 
 This project aims to develop a cutting-edge object detection system that identifies tourist landmarks in images or video streams. Leveraging the YOLO (You Only Look Once) algorithm, our goal is to enhance the travel experience by providing instant information about landmarks, facilitate urban navigation, and support local economies through increased tourism.
