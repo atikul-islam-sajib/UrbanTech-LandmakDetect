@@ -47,7 +47,9 @@ pip install -r requirements.txt
 - **Process:** Each image was annotated by drawing precise bounding boxes around landmarks and labeling them with their names. This meticulous process ensures the high accuracy of our training dataset.
 - **Preparation:** Images were preprocessed to fit YOLO's input requirements, including resizing and normalization. Data augmentation techniques such as flipping and rotation were applied to enhance model robustness.
 
-![Landmark Detection - Model Performance](./output/download.png)
+![Landmark Detection - Model Performance without augmented dataset](./output/Picture1.png)
+
+![Landmark Detection - Model Performance with augmented dataset + annotation](./output/download.png)
 
 ## State of the Art
 
