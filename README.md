@@ -1,6 +1,6 @@
 # Tourist Landmark Detection Using YOLO
 
-![Landmark Detection](./outputs/images.png)
+![Landmark Detection](./output/images.png)
 
 ## Project Overview
 
