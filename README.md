@@ -47,17 +47,25 @@ pip install -r requirements.txt
 - **Process:** Each image was annotated by drawing precise bounding boxes around landmarks and labeling them with their names. This meticulous process ensures the high accuracy of our training dataset.
 - **Preparation:** Images were preprocessed to fit YOLO's input requirements, including resizing and normalization. Data augmentation techniques such as flipping and rotation were applied to enhance model robustness.
 
+## State of the Art
+
+We utilize the YOLO algorithm for real-time object detection, chosen for its balance between speed and accuracy. The project explores the latest advancements in YOLO technology, ensuring our model is at the forefront of object detection capabilities.
+
+#### Check the model train - Yolo v5:
+
+| Epochs | Batch Size | Data Augmentation & Annotation | mAP     |
+|--------|------------|--------------------------------|---------|
+| 50     | 16         | No                             | < 0.50  |
+| 50     | 64         | Yes                            | > 0.75  |
+
+
 ##### Model Performance without augmented dataset
 
 ![Landmark Detection - Model Performance without augmented dataset](./output/Picture1.png)
 
-Model Performance with augmented dataset + annotation manually
+##### Model Performance with augmented dataset + annotation manually
 
 ![Landmark Detection - Model Performance with augmented dataset + annotation](./output/download.png)
-
-## State of the Art
-
-We utilize the YOLO algorithm for real-time object detection, chosen for its balance between speed and accuracy. The project explores the latest advancements in YOLO technology, ensuring our model is at the forefront of object detection capabilities.
 
 ## Model Performance
 
