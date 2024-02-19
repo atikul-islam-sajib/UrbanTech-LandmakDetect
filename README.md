@@ -44,6 +44,9 @@ pip install -r requirements.txt
 
 - **Notebook of data augmentation**: [Augmentation Notebook](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/blob/main/Augmentation_Notebook/Augmentor.ipynb).
 
+### Augmented data
+
+- **Link of downloaded + annotated dataset** [Downloaded + Augmented data](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/tree/main/downloaded_data).
 
 
 ### Annotation
@@ -52,8 +55,8 @@ pip install -r requirements.txt
 - **Process:** Each image was annotated by drawing precise bounding boxes around landmarks and labeling them with their names. This meticulous process ensures the high accuracy of our training dataset.
 - **Preparation:** Images were preprocessed to fit YOLO's input requirements, including resizing and normalization. Data augmentation techniques such as flipping and rotation were applied to enhance model robustness.
 
-### Annotated data
-- **Link of downloaded + annotated dataset** [Downloaded + Annotated data](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/tree/main/downloaded_data).
+Data Annotation Tool: visit the -> [Annotation tool](https://github.com/labelmeai/labelme).
+
 
 ## State of the Art
 
