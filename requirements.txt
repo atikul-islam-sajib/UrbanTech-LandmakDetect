@@ -1,25 +1,3 @@
-# -f https://download.pytorch.org/whl/lts/1.10/torch_lts.html
-# gdown
-# Cython
-# matplotlib
-# numpy
-# opencv-contrib-python
-# pillow
-# PyYAML
-# scipy
-# tqdm
-# flask
-# flask-cors
-# gunicorn
-# torch
-# torchvision
-# pandas
-# seaborn
-
-
-
-# Usage: pip install -r requirements.txt
-
 # Base ----------------------------------------
 matplotlib>=3.2.2
 numpy>=1.18.5,<1.24.0
