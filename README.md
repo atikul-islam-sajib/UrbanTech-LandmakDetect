@@ -47,7 +47,11 @@ pip install -r requirements.txt
 - **Process:** Each image was annotated by drawing precise bounding boxes around landmarks and labeling them with their names. This meticulous process ensures the high accuracy of our training dataset.
 - **Preparation:** Images were preprocessed to fit YOLO's input requirements, including resizing and normalization. Data augmentation techniques such as flipping and rotation were applied to enhance model robustness.
 
+##### Model Performance without augmented dataset
+
 ![Landmark Detection - Model Performance without augmented dataset](./output/Picture1.png)
+
+Model Performance with augmented dataset + annotation manually
 
 ![Landmark Detection - Model Performance with augmented dataset + annotation](./output/download.png)
 
@@ -63,9 +67,6 @@ Model Performance: visit the -> [Model Performance](https://github.com/labelmeai
 
 This project stands at the intersection of technology and urban exploration, offering a tool that enhances the way we interact with our cities and their rich cultural landscapes. By making landmark detection accessible and instant, we contribute to sustainable tourism, urban development, and the global appreciation of cultural heritage.
 
-## Getting Started
-
-(Include instructions on how to set up the project, install necessary dependencies, and run the application.)
 
 ## Usage
 
