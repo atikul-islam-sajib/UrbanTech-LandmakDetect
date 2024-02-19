@@ -23,8 +23,8 @@ pip install -r requirements.txt
 
 ### Sources
 
-- **Roboflow:** 50% of our dataset comes from Roboflow, offering diverse images of landmarks under various conditions.
-- **Google Images:** The remaining 50% were manually curated from Google Images to include a wide array of landmarks not present in the Roboflow dataset.
+- **Roboflow:** Dataset comes from Roboflow, offering diverse images of landmarks under various conditions.
+- **Google Images:** Some datasets were manually curated from Google Images to include a wide array of landmarks not present in the Roboflow dataset.
 
 ### Quantity Dataset
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ### Augmented data
 
-- **Link of downloaded + annotated dataset** [Downloaded + Augmented data](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/tree/main/downloaded_data).
+- **Link of downloaded + Augmented dataset** [Downloaded + Augmented data](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/tree/main/downloaded_data).
 
 
 ### Annotation
