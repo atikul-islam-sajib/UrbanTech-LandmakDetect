@@ -26,6 +26,14 @@ pip install -r requirements.txt
 - **Roboflow:** 50% of our dataset comes from Roboflow, offering diverse images of landmarks under various conditions.
 - **Google Images:** The remaining 50% were manually curated from Google Images to include a wide array of landmarks not present in the Roboflow dataset.
 
+### Quantity Dataset
+
+| Source          | Image Resolution |
+|-----------------|------------------|
+| Roboflow Images | 1200             |
+| Downloaded Images | 300            |
+
+
 ### Annotation
 - **Augmentation**  To further enhance the dataset's diversity and robustness, data augmentation techniques such as flipping, rotation, and scaling were applied. This step helps in reducing overfitting and improving the model's perforsmance on unseen  images.
 - **To install**: ```pip install augmentor```
@@ -39,7 +47,7 @@ pip install -r requirements.txt
 - **Process:** Each image was annotated by drawing precise bounding boxes around landmarks and labeling them with their names. This meticulous process ensures the high accuracy of our training dataset.
 - **Preparation:** Images were preprocessed to fit YOLO's input requirements, including resizing and normalization. Data augmentation techniques such as flipping and rotation were applied to enhance model robustness.
 
-![Landmark Detection - Model Performance](./output/download.jpg)
+![Landmark Detection - Model Performance](./output/download.png)
 
 ## State of the Art
 
