@@ -1,6 +1,6 @@
 # Tourist Landmark Detection Using YOLO
 
-![Landmark Detection](./output/images.jpg)
+![Landmark Detection](./output/images1.jpg)
 
 ## Project Overview
 
@@ -12,6 +12,12 @@ This project aims to develop a cutting-edge object detection system that identif
 - **Urban Navigation:** Aid city residents and visitors in discovering and exploring local landmarks.
 - **Cultural Preservation:** Promote awareness and conservation of historical and cultural sites.
 - **Economic Development:** Drive tourism and local business growth by highlighting landmarks.
+
+# Install dependencies
+
+```
+pip install -r requirements.txt
+```
 
 ## Dataset
 
