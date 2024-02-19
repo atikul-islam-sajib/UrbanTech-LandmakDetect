@@ -28,10 +28,9 @@ pip install -r requirements.txt
 
 ### Annotation
 - **Augmentation**  To further enhance the dataset's diversity and robustness, data augmentation techniques such as flipping, rotation, and scaling were applied. This step helps in reducing overfitting and improving the model's perforsmance on unseen  images.
-- **To install**: 
-```
-pip install augmentor
-```
+- **To install**: ```pip install augmentor```
+- **Notebook of data augmentation**: [Augmentation Notebook](https://github.com/atikul-islam-sajib/UrbanTech-LandmakDetect/blob/main/Augmentation_Notebook/Augmentor.ipynb).
+
 
 
 ### Annotation
