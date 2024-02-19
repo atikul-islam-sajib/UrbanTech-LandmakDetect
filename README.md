@@ -76,19 +76,24 @@ Model Performance: visit the -> [Model Performance](https://github.com/labelmeai
 This project stands at the intersection of technology and urban exploration, offering a tool that enhances the way we interact with our cities and their rich cultural landscapes. By making landmark detection accessible and instant, we contribute to sustainable tourism, urban development, and the global appreciation of cultural heritage.
 
 
-## Usage
-
-(Provide examples of how to use the application, including any relevant commands or scripts.)
-
 ## Contributing
 
-(Outline how others can contribute to the project, including coding standards, commit message guidelines, and contact information for submitting pull requests.)
+Contributions to improve the project are welcome. Please follow the standard procedures for contributing to open-source projects.
 
 ## License
 
-(Specify the license under which the project is released, if applicable.)
+This project is licensed under [MIT LICENSE](./LICENSE). Please see the LICENSE file for more details.
 
-## Acknowledgments
+## Acknowledgements
 
-- Thanks to Roboflow and Google Images for providing the datasets.
-- Appreciation to the developers of Labelme for their excellent annotation tool.
+Thanks to all contributors and users of the LSGAN project. Special thanks to those who have provided feedback and suggestions for improvements.
+
+## Contact
+
+For any inquiries or suggestions, feel free to reach out to [atikulislamsajib137@gmail.com].
+
+## Additional Information
+
+- This project is a work in progress and subject to changes.
+- Feedback and suggestions are highly appreciated.
+- Courtesy: Atikul Islam Sajib
