@@ -1,63 +1,60 @@
-from flask import Flask, request, jsonify, render_template,Response
+from flask import Flask, request, render_template, flash, redirect
+from flask_cors import CORS
 import os
-from flask_cors import CORS, cross_origin
-from detector_test import Detector
 from werkzeug.utils import secure_filename
-from werkzeug.datastructures import FileStorage
-from PIL import Image
-import base64
-import numpy as np
-from images.utils import decodeImage, encodeImageIntoBase64
+from detector_test import Detector
 
-os.putenv('LANG', 'en_US.UTF-8')
-os.putenv('LC_ALL', 'en_US.UTF-8')
+# Setting environment variables for language configuration
+os.environ['LANG'] = 'en_US.UTF-8'
+os.environ['LC_ALL'] = 'en_US.UTF-8'
 
 application = Flask(__name__)
-app = application
-CORS(app)
+CORS(application)
 
-UPLOAD_FOLDER = 'static'
+application.config['SECRET_KEY'] = "secret key"
+application.config['UPLOAD_FOLDER'] = 'static'
 
-app.secret_key = "secret key"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+class ImageNotFoundError(Exception):
+    """Exception raised when an image is not found."""
+    def __init__(self, message="Image not found"):
+        self.message = message
+        super().__init__(self.message)
 
-#### This is the entry point of the website ####
-@app.route("/")
-def hello_world():
+
+@application.route("/")
+def index():
+    """Render the main page of the website."""
     return render_template('index.html')
 
-#### Create User fine Exception ####
-class ImageFoundError(Exception):
-    def __init__(self, message):
-        return "Image Not Found".capitalize()
 
-#### This is for the prediction ####
-@app.route('/', methods=['POST'])
-@cross_origin()
+@application.route('/', methods=['POST'])
 def submit_file():
+    """
+    Handle file upload and object detection.
+    Returns the result of object detection to the user.
+    """
     if request.method == 'POST':
         if 'file' not in request.files:
-            flash('No file part')
-            return "No file"
+            flash('No file part', 'error')
+            return redirect(request.url)
         file = request.files['file']
         if file.filename == '':
-            flash('No file selected for uploading')
-            return "File"
-        if file:
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-            try:
-                object_detector = Detector(filename)
-            except Exception as e:
-                print("The error is ", e.with_traceback(tb))
-            else:
-                result = object_detector.detect_action()
-                encoded_image = result['image']
-            finally:
-                return render_template('index.html', detected = encoded_image , orginal = 'static/'+filename)
-        else:
-            print("File not uploaded successfully".capitalize())
-#### Call the current directory ####
+            flash('No file selected for uploading', 'error')
+            return redirect(request.url)
+        
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(application.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+
+        try:
+            object_detector = Detector(filename)
+            result = object_detector.detect_action()
+            encoded_image = result['image']
+            return render_template('index.html', detected=encoded_image, original='static/'+filename)
+        except Exception as e:
+            flash('Failed to process the image', 'error')
+            return redirect(request.url)
+
+
 if __name__ == "__main__":
-    port = 5000
-    application.run(host='0.0.0.0', port=port)
+    application.run(host='0.0.0.0', port=5000)
